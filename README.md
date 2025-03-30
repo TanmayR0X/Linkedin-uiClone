@@ -3,14 +3,23 @@ A simple LinkedIn UI clone built using HTML, CSS, and JavaScript. This project r
 
 Live Demo - https://tanmayr0x.github.io/Linkedin-uiClone/
 
-✨ Features
+✨ Features ->
+
 ✅ Responsive design 📱💻
+
 ✅ Navbar & Sidebar 🏠
+
 ✅ Feed section with posts 📝
+
 ✅ Like & Comment functionality ❤️💬
+
 ✅ Static Profile & Messaging UI 💬
 
-🛠️ Technologies Used
+
+
+
+🛠️ Technologies Used ->
+
 HTML5 
 
 CSS3 
