@@ -13,6 +13,7 @@ Live Demo - https://tanmayr0x.github.io/Linkedin-uiClone/
 
 ✅ Static Profile & Messaging UI 💬
 
+✅ Added Some Functionalities
 
 
 
