@@ -1,26 +1,18 @@
 LinkedIn UI Clone
+A simple LinkedIn UI clone built using HTML, CSS, and JavaScript. This project replicates the front-end design of LinkedIn, providing a clean and responsive layout.
 
-Live Demo -https://tanmayr0x.github.io/Linkedin-uiClone/
+Live Demo - https://tanmayr0x.github.io/Linkedin-uiClone/
 
-A simple LinkedIn UI clone built using HTML, CSS, and JavaScript.
+✨ Features
+✅ Responsive design 📱💻
+✅ Navbar & Sidebar 🏠
+✅ Feed section with posts 📝
+✅ Like & Comment functionality ❤️💬
+✅ Static Profile & Messaging UI 💬
 
-Features
+🛠️ Technologies Used
+HTML5 
 
-Responsive design for various screen sizes
+CSS3 
 
-Basic navigation bar similar to LinkedIn
-
-Profile section with user details
-
-Feed section displaying posts
-
-Sidebar with suggestions and additional links
-
-Technologies Used
-
-HTML: Structure of the web pages
-
-CSS: Styling and layout
-
-JavaScript: Basic interactivity and dynamic elements
-
+JavaScript 
