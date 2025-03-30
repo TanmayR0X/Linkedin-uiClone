@@ -11,8 +11,6 @@ Live Demo - https://tanmayr0x.github.io/Linkedin-uiClone/
 
 ✅ Feed section with posts 📝
 
-✅ Like & Comment functionality ❤️💬
-
 ✅ Static Profile & Messaging UI 💬
 
 
