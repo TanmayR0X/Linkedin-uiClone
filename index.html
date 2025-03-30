@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/logo.png">
+  <title>Linkedin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/62916184bd.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <!-- logo navbar-left -->
+    <div class="navbar-left">
+      <a href="index.html" class="logo">
+        <img src="./images/logo.png">
+      </a>
+      <span class="search">
+        <img src="images/search.png" class="search-icon">
+        <input type="text" placeholder="Search" class="search-bar">
+        <div class="dropdown">
+          <div class="dropdown-item"><img src="images/search.png" >interview tips</div>
+          <div class="dropdown-item"><img src="images/search.png" >latest ai</div>
+          <div class="dropdown-item"><img src="images/search.png" >remove work</div>
+          <div class="dropdown-item"><img src="images/search.png" >balancing work and personal life</div>
+        </div>
+      </span>
+    </div>
+
+    <!-- Menu Links navbar-center -->
+    <div class="navbar-center">
+     <ul>
+      <li onclick="showPage('home')"><a href="#" id="home-icon" class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false"  style="margin-bottom: 4px;">
+        <path d="M23 9v2h-2v7a3 3 0 01-3 3h-4v-6h-4v6H6a3 3 0 01-3-3v-7H1V9l11-7 5 3.18V2h3v5.09z"></path>
+      </svg><span>Home</span> </a></li>
+
+      <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style="margin-bottom: 4px;">
+        <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
+      </svg><span>My Network</span> </a></li>
+
+      <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style="margin-bottom: 4px;">
+        <path d="M17 6V5a3 3 0 00-3-3h-4a3 3 0 00-3 3v1H2v4a3 3 0 003 3h14a3 3 0 003-3V6zM9 5a1 1 0 011-1h4a1 1 0 011 1v1H9zm10 9a4 4 0 003-1.38V17a3 3 0 01-3 3H5a3 3 0 01-3-3v-4.38A4 4 0 005 14z"></path>
+      </svg><span>jobs</span> </a></li>
+
+      <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style="margin-bottom: 4px;">
+        <path d="M16 4H8a7 7 0 000 14h4v4l8.16-5.39A6.78 6.78 0 0023 11a7 7 0 00-7-7zm-8 8.25A1.25 1.25 0 119.25 11 1.25 1.25 0 018 12.25zm4 0A1.25 1.25 0 1113.25 11 1.25 1.25 0 0112 12.25zm4 0A1.25 1.25 0 1117.25 11 1.25 1.25 0 0116 12.25z"></path>
+      </svg><span>Messaging</span> </a></li>
+
+      <li><a href="#"><span class="notification"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style="margin-bottom: 4px;">
+        <path d="M22 19h-8.28a2 2 0 11-3.44 0H2v-1a4.52 4.52 0 011.17-2.83l1-1.17h15.7l1 1.17A4.42 4.42 0 0122 18zM18.21 7.44A6.27 6.27 0 0012 2a6.27 6.27 0 00-6.21 5.44L5 13h14z"></path>
+      </svg></span> <span>Notification</span></a></li>
+     </ul>
+    </div>
+    <!-- User icon navbar-right -->
+    <div class="navbar-right">
+     <div class="online">
+      <img src="images/usersq.webp" class="nav-profile-img">
+     </div>
+     <span>Me<i class="fa-solid fa-caret-down"></i></span>
+    </div>
+     <div class="profile-menu-wrap hidden" >
+      <div class="profile-menu">
+        <div class="user-info view-profile-btn" onclick="showPage('profile')">
+          <div class="user-profile" >
+            <img src="images/usersq.webp" width="100%">
+            <div>
+              <h3>Ryan Gosling</h3>
+            <h4>SWE @Google | ex Amazon | ex gen AI founder</h4>
+            </div>
+          </div>
+          <button>View Profile</button>
+        </div>
+        <hr>
+        <div class="dropdown-links">
+         <h3>Accounts</h3>
+        <div>
+          <a href="#">Setting and Privacy</a>
+          <a href="#">Help</a>
+          <a href="#">Language</a>
+        </div>
+        </div>
+        <div class="dropdown-links-account">
+         <h3>Manage</h3>
+        <div>
+          <a href="#">Post & Activity</a>
+          <a href="#">Job Posting Account</a>
+          <a href="#">Sign out</a>
+        </div>
+        </div>
+      </div>
+     </div>
+
+   <div class="professional">
+    <div class="business">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false">
+        <path d="M3 3h4v4H3zm7 4h4V3h-4zm7-4v4h4V3zM3 14h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4zM3 21h4v-4H3zm7 0h4v-4h-4zm7 0h4v-4h-4z"></path>
+      </svg>
+      <span>For Business</span>
+    </div>
+    <div class="premium">
+   <i class="fa-brands fa-linkedin-in"></i>
+      <span>Try Premium for ₹0</span>
+    </div>
+   </div>
+  </nav>
+    <!-- for routing -->
+    <div id="home" class="page active">
+      <main class="container">
+        <!-- left content -->
+        <div class="left-sidebar">
+          <div class="sidebar-profile-box profile-img-routing" onclick="showPage('profile')">
+            <img src="images/banner.jpg" width="100%">
+            <div class="sidebar-profile-info">
+              <img src="images/usersq.webp" >
+              <h1>Ryan Gosling</h1>
+              <h3>SWE @Google | ex Amazon | ex gen AI founder</h3>
+              <h4>Los Angeles , California</h4>
+            </div>
+          </div>
+          <div class="profile-description">
+            <ul>
+              <li>Profile viewers <a href="#">20</a></li>
+              <li>Connections <a href="#">1,260</a></li>
+            </ul>
+            <p>view all analytics</p>
+          </div>
+          <div class="premium-bar">
+            <p>Reach career heights with premium</p>
+            <div class="premium-link">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>Try for ₹0</span>
+            </div>
+          </div>
+          <div class="activity-icons">
+            <ul>
+              <li><i class="fa-solid fa-bookmark"></i><p>Saved items</p></li>
+              <li><i class="fa-solid fa-users"></i><p>Groups</p></li>
+              <li><i class="fa-solid fa-newspaper"></i><p>Newsletter</p> </li>
+              <li><i class="fa-regular fa-calendar"></i><p>Events</p></li>
+            </ul>
+          </div>
+        </div>
+        <!-- main content -->
+        <div class="main-content">
+          <div class="create-post">
+            <div class="create-post-input">
+              <img src="images/usersq.webp" class="post-img-routing" onclick="showPage('profile')">
+              <button>Start a post</button>
+            </div>
+            <div class="create-post-links">
+              <li><img src="images/videoicon.png">Video</li>
+              <li><img src="images/galleryicon.png">Photo</li>
+              <li><img src="images/articleicon.webp">Write article</li>
+            </div>
+          </div>
+          <div class="sort-by">
+            <hr>
+            <p>Sort by : <span>Top <i class="fa-solid fa-caret-down"></i></span></p>
+          </div>
+          <div class="post">
+            <div class="post-author">
+              <img src="images/post1.jpeg">
+              <div>
+               <h1>Charles Gomez</h1>
+               <small>Software manager at Hexaware | alumni TCS</small>
+               <small>3d .<i class="fa-solid fa-earth-asia"></i></small>
+              </div>
+              <p class="follow">+ Follow</p>
+            </div>
+            <p>Success in business requires training and discipline and hard work. But if you're not frightened by these things, the opportunities are just as great today as they ever were. —David Rockefeller <span> ...more</span></p>
+            <img src="images/postimage1.webp" width="100%">
+    
+            <div class="post-stats">
+              <div>
+                <img src="images/thumbsup.png">
+                <img src="images/love.png">
+                <img src="images/clap.png">
+                1,149
+              </div>
+              <span>
+              <p>34 comments</p>
+              &nbsp;&nbsp;
+              <p>2 repost</p>
+              </span>
+            </div>
+            <div class="post-activity">
+              <div>
+               <span> <i class="fa-regular fa-thumbs-up fa-flip-horizontal"></i>Like</span>
+               <span>
+                <i class="fa-regular fa-comment-dots"></i>
+              Comment
+               </span>
+               <span>
+                <svg class="repost-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 9L21 6L18 3" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21 6H9C6.79086 6 5 7.79086 5 10V11" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 15L3 18L6 21" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 18H15C17.2091 18 19 16.2091 19 14V13" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Repost
+               </span>
+                <span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                Send
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-author">
+              <img src="images/user-4.png">
+              <div>
+               <h1>Emilia Phinley</h1>
+               <small>Digital Marketing Specialist at IBM | Self Inspired</small>
+               <small>45min .<i class="fa-solid fa-earth-asia"></i></small>
+              </div>
+              <p class="follow">+ Follow</p>
+            </div>
+            <p>Coming together is a beginning. Keeping together is progress. Working together is success. - Henry Ford  <span> ...more</span></p>
+            <img src="images/post-image-2.png" width="100%">
+    
+            <div class="post-stats">
+              <div>
+                <img src="images/thumbsup.png">
+                <img src="images/love.png">
+                <img src="images/clap.png">
+                2,159
+              </div>
+              <span>
+              <p>64 comments</p>
+              &nbsp;&nbsp;
+              <p>0 repost</p>
+              </span>
+            </div>
+            <div class="post-activity">
+              <div>
+               <span> <i class="fa-regular fa-thumbs-up fa-flip-horizontal"></i>Like</span>
+               <span>
+                <i class="fa-regular fa-comment-dots"></i>
+              Comment
+               </span>
+               <span>
+                <svg class="repost-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 9L21 6L18 3" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21 6H9C6.79086 6 5 7.79086 5 10V11" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 15L3 18L6 21" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 18H15C17.2091 18 19 16.2091 19 14V13" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Repost
+               </span>
+                <span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                Send
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-author">
+              <img src="images/user-5.png">
+              <div>
+               <h1>Aryan Kumar</h1>
+               <small>Software Engineer | Automation - Merchant Experience</small>
+               <small>5h .<i class="fa-solid fa-earth-asia"></i></small>
+              </div>
+              <p class="follow">+ Follow</p>
+            </div>
+            <p>Be the one that leaves impact and inspire others  <span> ...more</span></p>
+            <img src="images/postleader.jpg" width="100%">
+    
+            <div class="post-stats">
+              <div>
+                <img src="images/thumbsup.png">
+                <img src="images/love.png">
+                <img src="images/clap.png">
+                11,453
+              </div>
+              <span>
+              <p>102 comments</p>
+              &nbsp;&nbsp;
+              <p>10 repost</p>
+              </span>
+            </div>
+            <div class="post-activity">
+              <div>
+               <span> <i class="fa-regular fa-thumbs-up fa-flip-horizontal"></i>Like</span>
+               <span>
+                <i class="fa-regular fa-comment-dots"></i>
+              Comment
+               </span>
+               <span>
+                <svg class="repost-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 9L21 6L18 3" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21 6H9C6.79086 6 5 7.79086 5 10V11" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 15L3 18L6 21" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 18H15C17.2091 18 19 16.2091 19 14V13" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Repost
+               </span>
+                <span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                Send
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="post">
+            <div class="post-author">
+              <img src="images/user6.avif" height="45px" style="object-fit: cover;">
+              <div>
+               <h1>Lily Jones</h1>
+               <small>Software Engineer at capegemini | AI developer and expert</small>
+               <small>2d  .<i class="fa-solid fa-earth-asia"></i></small>
+              </div>
+              <p class="follow">+ Follow</p>
+            </div>
+            <p>I've long believed that AI won't just enhance the way we live, but transform it fundamentally. … AI is placing tools of unprecedented power, flexibility, and even personalisation into everyone's hands, requiring little more than natural language to operate. They'll assist us in many parts of our lives <span> ...more</span></p>
+            <img src="images/aipost.jpg" width="100%">
+    
+            <div class="post-stats">
+              <div>
+                <img src="images/thumbsup.png">
+                <img src="images/love.png">
+                <img src="images/clap.png">
+                9,453
+              </div>
+              <span>
+              <p>79 comments</p>
+              &nbsp;&nbsp;
+              <p>23 repost</p>
+              </span>
+            </div>
+            <div class="post-activity">
+              <div>
+               <span> <i class="fa-regular fa-thumbs-up fa-flip-horizontal"></i>Like</span>
+               <span>
+                <i class="fa-regular fa-comment-dots"></i>
+              Comment
+               </span>
+               <span>
+                <svg class="repost-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 9L21 6L18 3" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M21 6H9C6.79086 6 5 7.79086 5 10V11" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M6 15L3 18L6 21" stroke="#333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 18H15C17.2091 18 19 16.2091 19 14V13" stroke="#333" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              Repost
+               </span>
+                <span>
+                  <i class="fa-solid fa-paper-plane"></i>
+                Send
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- right content -->
+        <div class="right-sidebar">
+          <div class="trending-now">
+            <div class="trending-heading">
+              <h1>Trending Now</h1>
+              <i class="info-icon fa-solid fa-circle-info"></i>
+              <span class="popup hidden">These are the day's top professional news stories and conversations. <a href="#">Learn more</a> about how they're selected.</span>
+    
+            </div>
+            <p>Curated by linkedin News</p>
+            <div class="trending-news">
+             <span>
+              <h3>Paytm cuts ties with Juspay</h3>
+              <p>22m ago • 8,927 readers</p>
+             </span>
+             <span>
+              <h3>Zepto follows in BigBasket's footsteps</h3>
+              <p>2h ago • 1,005 readers</p>
+             </span>
+             <span>
+              <h3>Green jobs set to grow</h3>
+              <p>2h ago • 383 readers</p>
+             </span>
+             <span>
+              <h3>Unpaid loans affect public banks</h3>
+              <p>53m ago • 9,927 readers</p>
+             </span>
+             <span>
+              <h3>Legacy luggage brands feel the heat</h3>
+              <p>37m ago • 11,347 readers</p>
+             </span>
+             <div class="more-news hidden">
+              <span>
+                <h3>Top skills on the rise in India</h3>
+                <p>6d ago • 10,543 readers</p>
+               </span>
+              <span>
+                <h3>Top videos of the week</h3>
+                <p>5d ago • 11,943 readers</p>
+               </span>
+              <span>
+                <h3>GCCs to pay the big bucks</h3>
+                <p>1d ago • 2,900 readers readers</p>
+               </span>
+            </div>
+            <button id="show-more-btn">Show more <i class="fa-solid fa-chevron-down"></i></button>
+            </div>
+            <div class="puzzles">
+              <h3>Today's puzzles</h3>
+              <ul>
+                <li>
+                  <div>
+                    <img src="/images/zip.svg">
+                  <span class="puzzle-content">
+                  <h4>Zip</h4>
+                  <p>Complete the path</p>
+                  </span>
+                  </div>
+                  <i class="fa-solid fa-angle-right"></i>
+                </li>
+                <li>
+                  <div>
+                    <img src="/images/pinpoint.svg">
+                  <span class="puzzle-content">
+                  <h4>Pinpoint</h4>
+                  <p>Guess the category</p>
+                  </span>
+                  </div>
+                  <i class="fa-solid fa-angle-right"></i>
+                </li>
+                <li>
+                  <div>
+                    <img src="/images/tango.svg">
+                  <span class="puzzle-content">
+                  <h4>Tango</h4>
+                  <p>Harmonize the grid</p>
+                  </span>
+                  </div>
+                  <i class="fa-solid fa-angle-right"></i>
+                </li>
+                <li>
+                  <div>
+                    <img src="/images/queens.svg">
+                  <span class="puzzle-content">
+                  <h4>Queens</h4>
+                  <p>Crown each region</p>
+                  </span>
+                  </div>
+                  <i class="fa-solid fa-angle-right"></i>
+                </li>
+              </ul>
+            </div>
+          </div>
+           <div class="sidebar-ad">
+            <small>Promoted<i class="show-ad-popup fa-solid fa-ellipsis"></i></small>
+            <img src="/images/jobsbanner.jpeg" width="100%">
+            <img src="/images/usersq.webp" width="20%" class="user-icon">
+            <p>Ryan, explore jobs at <span>Linkedin</span> that match your skills</p>
+            <div class="linkedin-ad">
+             <img src="/images/logo.png">
+             <span>
+              <h4>Linkedin</h4>
+             <h5>Computer software</h5>
+             </span>
+            </div>
+            <div class="button-container">
+              <button>See Jobs</button>
+            </div>
+           </div>
+           <div class="sidebar-useful-links">
+            <a href="#">About</a>
+            <a href="#">Accessibility</a>
+            <a href="#">Help center</a>
+            <a href="#">Privacy & Terms</a>
+            <a href="#">Ad Choices</a>
+            <a href="#">Buisness Service</a>
+            <a href="#">Get the Linkedin app</a>
+            <a href="#">More</a>
+    
+            <div class="copyright-msg">
+              <p><span>Linked</span><img src="/images/logo.png">Linkedin corporation &#169 2025 </p>
+            </div>
+           </div>
+        </div>
+      </main>
+    </div>
+    <!-- Profile Page -->
+   <div id="profile" class="page">
+    <div class="container">
+      <div class="profile-main">
+        <div class="profile-container">
+          <img src="images/banner.jpg" width="100%" height="189px" style="cursor: pointer;">
+          <i class="fa-solid fa-pencil"></i>
+          <div class="profile-container-inner">
+            <img src="images/usersq.webp" class="profile-pic">
+            <i class="profile-edit fa-solid fa-pencil"></i>
+            <h1>Ryan Gosling</h1>
+          <p>SWE @Google | ex Amazon | ex gen AI founder</p>
+          <small>Los Angeles , California  &nbsp;<a href="#">.Contact info</a></small>
+          </div>
+          <div class="connections">
+            1260 connections
+          </div>
+          <div class="profile-buttons">
+            <button>Open to</button>
+            <button>Add profile section</button>
+            <button>Enhance profile</button>
+            <button>Resources</button>
+          </div>
+        </div>
+        <div class="suggestion">
+          <h3>Suggested for you</h3>
+          <p><i class="fa-solid fa-eye"></i> Private to you</p>
+          <div class="inner-suggestion">
+            <div>
+              <img src="images/summary-removebg-preview.png">
+              <h4>Write a summary to highlight your personality or work experience</h4>
+            </div>
+            <p>Members who include a summary receive up to 3.9 times as many profile views.</p>
+            <button>Add a summary</button>
+          </div>
+        </div>
+        <div class="analytics">
+          <h3>Analytics</h3>
+          <p><i class="fa-solid fa-eye"></i> Private to you</p>
+          <div class="analytics-items">
+            <span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style=" color: #333;" >
+                <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
+              </svg><h4>78 profile views</h4></span>
+              <p>Discover who's viewed your profile.</p>
+            </span>
+            <span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style=" color: #333;">
+                <path d="M23 20v1H1v-1zM8 9H2v10h6zm7-6H9v16h6zm7 11h-6v5h6z"></path>
+              </svg> <h4>2 post impressions</h4></span>
+              <p>Start a post to increase engagement.Start a post to increase engagement. <small>Past 7 days</small></p>
+            </span>
+            <span>
+              <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style=" color: #333;">
+                <path d="M21.41 18.59l-5.27-5.28A6.83 6.83 0 0017 10a7 7 0 10-7 7 6.83 6.83 0 003.31-.86l5.28 5.27a2 2 0 002.82-2.82zM5 10a5 5 0 115 5 5 5 0 01-5-5z"></path>
+              </svg> <h4>14 search appearances</h4></span>
+              <p>See how often you appear in search results.</p>
+            </span>
+          </div>
+            <button>Show all analytics</button>
+        </div>
+        <!-- experience -->
+        <div class="experience">
+          <div class="edit-icons">
+            <i class="fa-regular fa-plus"></i>
+            <i class="profile-edit fa-solid fa-pencil"></i>
+          </div>
+          <h3 style="color: black;">Experience</h3>
+          <div class="company">
+            <div class="role">
+            <img src="/images/google.webp" style="height: 50px; width: 50px;">
+            <div>
+              <h3>Software Engineer</h3>
+              <h4>Google &middot; Full-time</h4>
+            </div>
+            </div>
+            <div class="timeline">
+              <small>Jul 2023 - Present </small>
+            <br>
+            <small>Los Angeles , California , USA</small>
+            </div>
+          </div>
+          <hr>
+          <div class="company">
+            <div class="role">
+            <img src="/images/amazon.jpeg" style="height: 46px; width: 46px; margin-right: 4px;">
+            <div>
+              <h3>Software Engineer</h3>
+              <h4>Amazon </h4>
+            </div>
+            </div>
+            <div class="timeline">
+              <small>May 2020 - March 2023 </small>
+            <br>
+            <small>Los Angeles , California , USA</small>
+            </div>
+          </div>
+          <hr>
+          <div class="company">
+            <div class="role">
+            <img src="/images/coding ninja.jpeg" style="height: 50px; width: 50px; margin-right: 4px;">
+            <div>
+              <h3>Intern</h3>
+              <h4>Coding Ninjas </h4>
+            </div>
+            </div>
+            <div class="timeline">
+              <small>Jan 2018 - Apr 2019 </small>
+            <br>
+            <small>Los Angeles , California , USA</small>
+            </div>
+          </div>
+          <hr class="showAll">
+          <a href="#"> Show all 5 Experiences <img src="images/right-arrow.png"></a>
+        </div>
+        <!-- skills -->
+        <div class="skills">
+          <div class="edit-icons">
+            <i class="fa-regular fa-plus"></i>
+            <i class="profile-edit fa-solid fa-pencil"></i>
+          </div>
+          <h3 style="color: black;">Skills</h3>
+          <div class="skill">
+            <h2>Advance Dsa</h2>
+            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style=" color: #333;" >
+              <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
+            </svg> <small>2 endorsment</small></p>
+          </div>
+          <hr>
+          <div class="skill">
+            <h2>MongoDb</h2>
+            <p><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="currentColor" class="mercado-match" width="24" height="24" focusable="false" style=" color: #333;" >
+              <path d="M12 16v6H3v-6a3 3 0 013-3h3a3 3 0 013 3zm5.5-3A3.5 3.5 0 1014 9.5a3.5 3.5 0 003.5 3.5zm1 2h-2a2.5 2.5 0 00-2.5 2.5V22h7v-4.5a2.5 2.5 0 00-2.5-2.5zM7.5 2A4.5 4.5 0 1012 6.5 4.49 4.49 0 007.5 2z"></path>
+            </svg> <small>1 endorsment</small></p>
+          </div>
+          <hr class="showAll">
+          <a href="#"> Show all 20 skills <img src="images/right-arrow.png"></a>
+        </div>
+        <div class="links">
+          <div class="link">
+            <p>About</p>
+            <p>Professional Community Policies</p>
+            <p>Privacy & Terms </p>
+            <p>Sales Solutions</p>
+            <p>Safety Center</p>
+          </div>
+          <div class="link">
+            <p>Accessibility</p>
+            <p>Careers</p>
+            <p>Ad Choices</p>
+            <p>Mobile</p>
+          </div>
+          <div class="link">
+            <p>Talent Solutions</p>
+            <p>Marketing Solutions</p>
+            <p>Advertising</p>
+            <p>Small Buisness</p>
+          </div>
+          <div class="queries">
+            <p>
+              <i class="fa-solid fa-circle-question"></i>
+              <span><a>Questions?</a> <small>Visit our Help Center</small></span>
+            </p>
+            <p>
+              <i class="fa-solid fa-gear"></i>
+              <span><a>Manage your account and privacy </a><small>Go to your Settings</small></span>
+            </p>
+            <p>
+              <i class="fa-solid fa-shield-halved fa-flip-horizontal"></i>
+              <span><a>Recommendation transparency</a> <small>Learn more about Recommended Content</small></span>
+            </p>
+          </div>
+        </div>
+        <div class="copyright">
+          <p>LinkedIn Corporation © 2025</p>
+        </div>
+      </div>
+      <!-- Profile sidebar -->
+      <div class="profile-sidebar">
+        <div class="profile-setting">
+          <div class="profile-lan">
+            <h3>Profile language</h3>
+            <p>English</p>
+            <i class="profile-edit fa-solid fa-pencil"></i>
+          </div>
+          <hr>
+          <div class="public-profile">
+            <h3>Public profile & URL</h3>
+            <p>www.linkedin.com/in/tanmay-rajput1</p>
+            <i class="profile-edit fa-solid fa-pencil"></i>
+          </div>
+        </div>
+        <div class="sidebar-people-list">
+          <h3>people you may know</h3>
+          <div class="sidebar-people">
+            <img src="images/sidebarp2.jpg">
+            <div>
+              <h2>Tony Shark</h2>
+              <p>Java Developer at Microsoft</p>
+              <a href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;Connect</a>
+            </div>
+          </div>
+          <hr>
+          <div class="sidebar-people">
+            <img src="images/sidebarp3.jpeg">
+            <div>
+              <h2>Steven Jones</h2>
+              <p>Buisness Analists at IBM</p>
+              <a href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;Connect</a>
+            </div>
+          </div>
+          <hr>
+          <div class="sidebar-people">
+            <img src="images/user-4.png">
+            <div>
+              <h2>Emilia Phinley</h2>
+              <p>Digital Marketing Specialist at IBM</p>
+              <a href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;Connect</a>
+            </div>
+          </div>
+          <hr>
+          <div class="sidebar-people">
+            <img src="images/user-5.png">
+            <div>
+              <h2>Aryan Kumar</h2>
+              <p>Software Engineer | Automation - Merchant Experience</p>
+              <a href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;Connect</a>
+            </div>
+          </div>
+          <hr>
+          <div class="sidebar-people">
+            <img src="images/user6.avif">
+            <div>
+              <h2>Lily Jones</h2>
+              <p>Software Engineer at capegemini</p>
+              <a href="#"><i class="fa-solid fa-user-plus"></i>&nbsp;Connect</a>
+            </div>
+          </div>
+        </div>
+        <div class="ad">
+          <img src="images/ad.png">
+        </div>
+      </div>
+    </div>
+   </div>
+</body>
+<script src="index.js"></script>
+</html>
